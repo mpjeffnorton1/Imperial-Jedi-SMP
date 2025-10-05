@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity SMP - Minecraft Community</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="/UnitySMPLogo.png" alt="Unity SMP Logo" class="logo">
+            <span style="font-size: 1.5rem; font-weight: bold;">Unity SMP</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('about')">About</a></li>
+            <li><a href="#" onclick="showPage('streamers')">Streamers</a></li>
+            <li><a href="#" onclick="showPage('join')">Join</a></li>
+            <li><a href="#" onclick="showPage('faq')">FAQ</a></li>
+            <li><a href="#" onclick="showPage('rules')">Rules</a></li>
+            <li><a href="#" onclick="showPage('changelog')">Change Log</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Home Page -->
+        <div id="home" class="page">
+            <div class="hero">
+                <h1>Welcome to Unity SMP</h1>
+                <p>A thriving Minecraft community where creativity meets collaboration</p>
+            </div>
+
+            <div class="section">
+                <h2>Latest Announcements</h2>
+                <div class="announcement">
+                    <h3>Server Now Open!</h3>
+                    <p>Unity SMP is officially live and welcoming new members. Join our community today and start your
+                        adventure in our carefully crafted world!</p>
+                </div>
+                <div class="announcement">
+                    <h3>Community Events</h3>
+                    <p>Regular community events, building competitions, and collaborative projects are now scheduled.
+                        Check our Discord for the latest updates and event calendars.</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>What Makes Unity SMP Special</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>🌍 Custom World</h3>
+                        <p>Explore a beautifully generated world with unique biomes and structures.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🤝 Community Focused</h3>
+                        <p>Join a welcoming community of builders, explorers, and adventurers.</p>
+                    </div>
+                    <div class="card">
+                        <h3>⚡ Enhanced Gameplay</h3>
+                        <p>Experience Minecraft with quality-of-life improvements and custom features.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🛡️ Safe Environment</h3>
+                        <p>Strict rules and active moderation ensure a positive experience for everyone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="about" class="page hidden">
+            <div class="hero">
+                <h1>About Unity SMP</h1>
+                <p>A creative sanctuary where builders, dreamers, and friends come together to craft extraordinary
+                    worlds</p>
+            </div>
+
+            <div class="section">
+                <h2>Why Unity Exists</h2>
+                <p>Unity SMP was born from a simple dream: to create a space where creativity knows no bounds and
+                    friendships flourish naturally. What started as a passion project has blossomed into a thriving
+                    world where players come together for something more than just the game.</p>
+                <p>This server is more than just blocks and builds — it's a community where every player's vision
+                    matters, where collaboration outshines competition, and where the journey is just as important as
+                    the destination. Whether you're a master architect, a redstone engineer, or someone who just loves
+                    to explore and make friends, Unity is your home away from home.</p>
+            </div>
+
+            <div class="section">
+                <h2>Meet the Team</h2>
+                <p class="subtitle">The passionate individuals behind Unity SMP who make the magic happen</p>
+
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-icon">👑</div>
+                        <h3>Server Founder</h3>
+                        <div class="member-role">Community Leader & Visionary</div>
+                        <div class="member-traits">
+                            <span class="trait">Passionate Builder</span>
+                            <span class="trait">Community First</span>
+                        </div>
+                        <p>The heart and soul of Unity SMP, bringing the community together through dedication and
+                            vision. They're the reason we're all here, creating a space where everyone feels welcome.
+                        </p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-icon">🔧</div>
+                        <h3>Server Administrator</h3>
+                        <div class="member-role">Technical Lead & Problem Solver</div>
+                        <div class="member-traits">
+                            <span class="trait">Tech Wizard</span>
+                            <span class="trait">Always Available</span>
+                        </div>
+                        <p>Keeps the lights on and the world turning, making sure Unity runs smoothly for everyone. The
+                            go-to person for anything technical, ensuring optimal performance and stability.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-icon">🎨</div>
+                        <h3>Content Curator</h3>
+                        <div class="member-role">Experience Designer & Theme Setter</div>
+                        <div class="member-traits">
+                            <span class="trait">Creative Mind</span>
+                            <span class="trait">Detail Oriented</span>
+                        </div>
+                        <p>Shapes the world of Unity SMP by curating features and themes that guide the server
+                            experience. They make sure every adventure feels like a story waiting to be uncovered.</p>
+                    </div>
+
+                    <div class="team-member">
+                        <div class="member-icon">🛡️</div>
+                        <h3>Community Moderators</h3>
+                        <div class="member-role">Guardians of Harmony</div>
+                        <div class="member-traits">
+                            <span class="trait">Fair & Just</span>
+                            <span class="trait">Helpful</span>
+                        </div>
+                        <p>Our dedicated moderation team works tirelessly to maintain a positive, welcoming environment.
+                            They're here to help, guide, and ensure everyone has a great experience.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Special Thanks</h2>
+                <p>We'd like to extend our heartfelt gratitude to these amazing individuals who have been instrumental
+                    in getting the server up and running and keeping it running smoothly:</p>
+
+                <div class="thanks-grid">
+                    <div class="thanks-member">
+                        <div class="thanks-icon">⚔️</div>
+                        <div class="thanks-name">Community Moderators</div>
+                        <div class="thanks-role">Keeping the peace and helping players</div>
+                    </div>
+                    <div class="thanks-member">
+                        <div class="thanks-icon">💻</div>
+                        <div class="thanks-name">Technical Support Team</div>
+                        <div class="thanks-role">Solving problems behind the scenes</div>
+                    </div>
+                    <div class="thanks-member">
+                        <div class="thanks-icon">🎮</div>
+                        <div class="thanks-name">Beta Testers</div>
+                        <div class="thanks-role">Testing features and providing feedback</div>
+                    </div>
+                    <div class="thanks-member">
+                        <div class="thanks-icon">🌟</div>
+                        <div class="thanks-name">Community Contributors</div>
+                        <div class="thanks-role">Building amazing projects and events</div>
+                    </div>
+                </div>
+
+                <p style="text-align: center; margin-top: 2rem; font-style: italic; color: #e9d5ff;">Your dedication and
+                    expertise have made Unity SMP the wonderful place it is today. Thank you for everything you do!</p>
+            </div>
+
+            <div class="section" style="text-align: center;">
+                <h2>Ready to Join Us?</h2>
+                <p>Become part of our growing community and start your adventure today!</p>
+                <a href="https://discord.gg/2RhhczWp" onclick="showPage('join')" class="btn">Join Unity SMP</a>
+            </div>
+        </div>
+
+        <!-- Streamers Page -->
+        <div id="streamers" class="page hidden">
+            <div class="hero">
+                <h1>Unity SMP Streamers</h1>
+                <p>Watch our talented content creators bring Unity SMP to life</p>
+            </div>
+
+            <div class="section">
+                <h2>Featured Streamers</h2>
+                <p>Our community is home to amazing content creators who share their Unity SMP adventures with the
+                    world. Follow them, watch their streams, and join the fun!</p>
+
+                <div class="streamers-grid">
+                    <div class="streamer-card">
+                        <div class="streamer-avatar">🎮</div>
+                        <h3>StreamerOne</h3>
+                        <div class="streamer-platform">Twitch</div>
+                        <p>Master builder and redstone enthusiast. Known for creating massive community projects and
+                            hosting building competitions.</p>
+                        <div class="streamer-stats">
+                            <span class="stat">🔴 Live Daily</span>
+                            <span class="stat">⭐ 5K+ Followers</span>
+                        </div>
+                        <a href="https://discord.gg/2RhhczWp" class="streamer-btn">Watch Stream</a>
+                    </div>
+
+                    <div class="streamer-card">
+                        <div class="streamer-avatar">🎬</div>
+                        <h3>ContentCreator</h3>
+                        <div class="streamer-platform">YouTube</div>
+                        <p>Cinematic storyteller who creates epic adventure series and tutorials. Specializes in
+                            survival challenges and exploration content.</p>
+                        <div class="streamer-stats">
+                            <span class="stat">📹 Weekly Videos</span>
+                            <span class="stat">⭐ 10K+ Subscribers</span>
+                        </div>
+                        <a href="#" class="streamer-btn">Visit Channel</a>
+                    </div>
+
+                    <div class="streamer-card">
+                        <div class="streamer-avatar">🎪</div>
+                        <h3>EventHost</h3>
+                        <div class="streamer-platform">Twitch</div>
+                        <p>Community event organizer and variety streamer. Hosts weekly game nights, treasure hunts, and
+                            collaborative build sessions.</p>
+                        <div class="streamer-stats">
+                            <span class="stat">🔴 3x Weekly</span>
+                            <span class="stat">⭐ 3K+ Followers</span>
+                        </div>
+                        <a href="#" class="streamer-btn">Watch Stream</a>
+                    </div>
+
+                    <div class="streamer-card">
+                        <div class="streamer-avatar">⚡</div>
+                        <h3>TechGuru</h3>
+                        <div class="streamer-platform">YouTube & Twitch</div>
+                        <p>Technical wizard specializing in farms, automation, and optimization. Creates detailed
+                            tutorials and efficiency guides.</p>
+                        <div class="streamer-stats">
+                            <span class="stat">🔴 Weekend Streams</span>
+                            <span class="stat">⭐ 7K+ Followers</span>
+                        </div>
+                        <a href="#" class="streamer-btn">Watch Stream</a>
+                    </div>
+
+                    <div class="streamer-card">
+                        <div class="streamer-avatar">🎨</div>
+                        <h3>ArtisticBuilder</h3>
+                        <div class="streamer-platform">Twitch</div>
+                        <p>Creative architect focused on aesthetic builds and interior design. Shares building tips and
+                            hosts design workshops.</p>
+                        <div class="streamer-stats">
+                            <span class="stat">🔴 4x Weekly</span>
+                            <span class="stat">⭐ 4K+ Followers</span>
+                        </div>
+                        <a href="#" class="streamer-btn">Watch Stream</a>
+                    </div>
+
+                    <div class="streamer-card">
+                        <div class="streamer-avatar">🌟</div>
+                        <h3>AdventureSeeker</h3>
+                        <div class="streamer-platform">YouTube</div>
+                        <p>Explorer and lore enthusiast who documents server history and creates engaging narrative
+                            content about Unity SMP.</p>
+                        <div class="streamer-stats">
+                            <span class="stat">📹 Bi-Weekly Videos</span>
+                            <span class="stat">⭐ 6K+ Subscribers</span>
+                        </div>
+                        <a href="#" class="streamer-btn">Visit Channel</a>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <h3>Want to be featured?</h3>
+                    <p>If you're a Unity SMP member who creates content, reach out to us on Discord to be added to this
+                        page!</p>
+                    <a href="https://discord.gg/2RhhczWp" class="btn">Join Our Discord</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Page -->
+        <div id="join" class="page hidden">
+            <div class="section">
+                <h2>Join Unity SMP</h2>
+                <p>Becoming part of Unity SMP is simple! Follow these steps to get started:</p>
+
+                <h3>Step 1: Join Our Discord</h3>
+                <p>Our Discord server is the heart of our community. This is where you'll find announcements, connect
+                    with other players, and submit your application.</p>
+                <a href="https://discord.gg/2RhhczWp" class="btn">Join Discord Server</a>
+
+                <h3>Step 2: Read the Rules</h3>
+                <p>Before applying, make sure you've read and understood our community guidelines. These rules help
+                    maintain a positive environment for all players.</p>
+
+                <h3>Step 3: Submit Your Application</h3>
+                <p>Fill out the application form in our Discord server. Tell us about yourself, your Minecraft
+                    experience, and why you'd like to join Unity SMP. Our team reviews applications regularly.</p>
+
+                <h3>Step 4: Get Whitelisted</h3>
+                <p>Once your application is approved, you'll receive the server IP and be added to the whitelist. You'll
+                    also get access to exclusive Discord channels.</p>
+
+                <h3>Step 5: Start Playing!</h3>
+                <p>Launch Minecraft, connect to the server, and begin your journey. Don't hesitate to ask questions or
+                    request help from our friendly community members.</p>
+            </div>
+        </div>
+
+        <!-- FAQ Page -->
+        <div id="faq" class="page hidden">
+            <div class="section">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about Unity SMP. Can't find what you're looking for? Join our
+                    Discord and ask!</p>
+
+                <div class="faq-category">
+                    <h3>Getting Started</h3>
+
+                    <div class="faq-item">
+                        <h4>How do I join Unity SMP?</h4>
+                        <p>To join Unity SMP, you'll need to apply through our Discord server. Once your application is
+                            reviewed and approved, you'll be whitelisted and can start playing. Check out our <a
+                                href="#" onclick="showPage('join')" class="text-link">Join page</a> for detailed steps.
+                        </p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>What version of Minecraft do you use?</h4>
+                        <p>We currently run on the latest stable version of Minecraft Java Edition. Check our Discord
+                            announcements for the exact version number and any modpack requirements.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Is the server free to play?</h4>
+                        <p>Yes! Unity SMP is completely free to play. We're a community-driven server that relies on the
+                            passion and dedication of our players.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>What are the age requirements?</h4>
+                        <p>We welcome players of all ages, but we recommend players be at least 13 years old to fully
+                            enjoy the community experience and follow our guidelines. Players under 13 should have
+                            parental permission.</p>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Technical Support</h3>
+
+                    <div class="faq-item">
+                        <h4>What devices and platforms are supported?</h4>
+                        <p>Unity SMP runs on Minecraft Java Edition for Windows, Mac, and Linux. We cannot provide
+                            support for Bedrock Edition at this time.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>The server seems laggy. Is this normal?</h4>
+                        <p>Some lag can occur during peak hours or major events. If you're experiencing consistent lag,
+                            try restarting your client first. If the problem persists, report it in our Discord support
+                            channel.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I use OptiFine or other performance mods?</h4>
+                        <p>Yes! OptiFine and most performance-enhancing mods are allowed and encouraged. Just make sure
+                            they don't give you unfair advantages over other players. All mods must comply with our
+                            server rules.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>My game crashed. How do I get help?</h4>
+                        <p>Game crashes happen! Please share your crash log in our Discord support channel. Our
+                            technical team will do their best to help you identify and fix the issue.</p>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Gameplay & Features</h3>
+
+                    <div class="faq-item">
+                        <h4>Are there any custom features or plugins?</h4>
+                        <p>Yes! We have several quality-of-life plugins and custom features to enhance your gameplay
+                            experience. These include player shops, land claiming, and community events. Join the server
+                            to discover them all!</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I create shops or trade with other players?</h4>
+                        <p>Absolutely! We encourage player-to-player trading and have designated shopping districts
+                            where you can set up your own shops. Check in-game for more details.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How do I protect my builds?</h4>
+                        <p>We have land claiming features available to protect your builds from griefing. Instructions
+                            on how to claim land are available in-game and on our Discord.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Are there community projects I can join?</h4>
+                        <p>Yes! We regularly organize community builds, events, and collaborative projects. Keep an eye
+                            on our Discord announcements to participate in upcoming projects.</p>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Rules & Moderation</h3>
+
+                    <div class="faq-item">
+                        <h4>What happens if I break the rules?</h4>
+                        <p>Rule violations may result in warnings, temporary bans, or permanent removal from the server,
+                            depending on severity. Our moderation team handles each case fairly and individually. Check
+                            our <a href="" onclick="showPage('rules')" class="text-link">Rules page</a> for more
+                            details.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>How do I report a player or issue?</h4>
+                        <p>If you encounter rule violations or have concerns, please report them to our moderators
+                            through Discord. Open a support ticket with details and evidence if possible.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h4>Can I appeal a ban?</h4>
+                        <p>Yes, you can submit a ban appeal through our Discord server. Please be honest and respectful
+                            in your appeal, and our team will review it fairly.</p>
+                    </div>
+                </div>
+
+                <div class="section" style="margin-top: 2rem; text-align: center;">
+                    <h3>Still Need Help?</h3>
+                    <p>Can't find the answer you're looking for? We're here to help!</p>
+                    <a href="#" class="btn">Join Our Discord</a>
+                    <p style="margin-top: 1rem; opacity: 0.9;">Our community team and moderators are always ready to
+                        assist you with any questions or concerns.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rules Page -->
+        <div id="rules" class="page hidden">
+            <div class="section">
+                <h2>Community Guidelines</h2>
+                <p>Unity SMP is built on respect, creativity, and collaboration. Please follow these guidelines to
+                    ensure everyone has a great experience:</p>
+
+                <div class="grid">
+                    <div class="card">
+                        <h3>Respect & Conduct</h3>
+                        <ul>
+                            <li>Treat all community members with kindness and respect</li>
+                            <li>No harassment, discrimination, or hate speech of any kind</li>
+                            <li>Keep chat appropriate and family-friendly</li>
+                            <li>Respect personal boundaries and privacy</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Gameplay Rules</h3>
+                        <ul>
+                            <li>No griefing or destroying other players' builds without permission</li>
+                            <li>No stealing from other players</li>
+                            <li>PvP only with mutual consent</li>
+                            <li>No exploiting bugs or using hacked clients</li>
+                            <li>Keep the world beautiful - clean up after yourself</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Building Guidelines</h3>
+                        <ul>
+                            <li>Respect designated community areas and builds</li>
+                            <li>Build at least 200 blocks away from other players unless given permission</li>
+                            <li>No inappropriate builds or symbols</li>
+                            <li>Contribute to community projects when possible</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3>Communication</h3>
+                        <ul>
+                            <li>Use Discord for important announcements and discussions</li>
+                            <li>Report issues or concerns to moderators privately</li>
+                            <li>No spamming in chat or Discord</li>
+                            <li>English is the primary language for server chat</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Consequences</h3>
+                <p>Violations of these rules may result in warnings, temporary bans, or permanent removal from the
+                    server, depending on severity. Our moderation team handles each case fairly and individually.</p>
+            </div>
+        </div>
+
+        <!-- Change Log Page -->
+        <div id="changelog" class="page hidden">
+            <div class="hero">
+                <h1>Change Log</h1>
+                <p>Track all updates, improvements, and changes to Unity SMP</p>
+            </div>
+
+            <div class="section">
+                <div class="changelog-entry">
+                    <div class="changelog-header">
+                        <h3>Version 1.3.0</h3>
+                        <span class="changelog-date">October 5, 2024</span>
+                        <span class="changelog-badge new">Latest</span>
+                    </div>
+                    <div class="changelog-content">
+                        <h4>✨ New Features</h4>
+                        <ul>
+                            <li>Added new shopping district at spawn with designated plots</li>
+                            <li>Implemented player warps system - create custom teleport points</li>
+                            <li>Introduced weekly community challenges with rewards</li>
+                        </ul>
+                        <h4>🔧 Improvements</h4>
+                        <ul>
+                            <li>Optimized server performance for smoother gameplay</li>
+                            <li>Enhanced land claiming system with better visualization</li>
+                            <li>Updated spawn area with improved navigation signs</li>
+                        </ul>
+                        <h4>🐛 Bug Fixes</h4>
+                        <ul>
+                            <li>Fixed issue with chest shops not working properly</li>
+                            <li>Resolved teleportation lag in certain areas</li>
+                            <li>Corrected permission issues with community farms</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="changelog-entry">
+                    <div class="changelog-header">
+                        <h3>Version 1.2.5</h3>
+                        <span class="changelog-date">September 20, 2024</span>
+                    </div>
+                    <div class="changelog-content">
+                        <h4>✨ New Features</h4>
+                        <ul>
+                            <li>Added custom achievements system with unique rewards</li>
+                            <li>Introduced player-run events calendar on Discord</li>
+                        </ul>
+                        <h4>🔧 Improvements</h4>
+                        <ul>
+                            <li>Improved anti-grief protection in community areas</li>
+                            <li>Enhanced Discord integration with in-game chat</li>
+                            <li>Updated resource pack with new textures</li>
+                        </ul>
+                        <h4>🐛 Bug Fixes</h4>
+                        <ul>
+                            <li>Fixed duplication glitch with certain items</li>
+                            <li>Resolved crash issues during large events</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="changelog-entry">
+                    <div class="changelog-header">
+                        <h3>Version 1.2.0</h3>
+                        <span class="changelog-date">September 1, 2024</span>
+                    </div>
+                    <div class="changelog-content">
+                        <h4>✨ New Features</h4>
+                        <ul>
+                            <li>Launched community build competition system</li>
+                            <li>Added player statistics tracking and leaderboards</li>
+                            <li>Introduced custom mob drops for enhanced gameplay</li>
+                        </ul>
+                        <h4>🔧 Improvements</h4>
+                        <ul>
+                            <li>Upgraded server hardware for better performance</li>
+                            <li>Improved spawn protection mechanics</li>
+                            <li>Enhanced economy balance with adjusted shop prices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="changelog-entry">
+                    <div class="changelog-header">
+                        <h3>Version 1.1.0</h3>
+                        <span class="changelog-date">August 15, 2024</span>
+                    </div>
+                    <div class="changelog-content">
+                        <h4>✨ New Features</h4>
+                        <ul>
+                            <li>Added player shops plugin for economy system</li>
+                            <li>Introduced land claiming to protect builds</li>
+                            <li>Created community resource farm at spawn</li>
+                        </ul>
+                        <h4>🔧 Improvements</h4>
+                        <ul>
+                            <li>Optimized world generation for better biome distribution</li>
+                            <li>Updated server rules and guidelines</li>
+                        </ul>
+                        <h4>🐛 Bug Fixes</h4>
+                        <ul>
+                            <li>Fixed login issues for some players</li>
+                            <li>Resolved inventory sync problems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="changelog-entry">
+                    <div class="changelog-header">
+                        <h3>Version 1.0.0</h3>
+                        <span class="changelog-date">August 1, 2024</span>
+                        <span class="changelog-badge launch">Launch</span>
+                    </div>
+                    <div class="changelog-content">
+                        <h4>🎉 Initial Release</h4>
+                        <ul>
+                            <li>Unity SMP officially launched!</li>
+                            <li>Fresh world with custom spawn area</li>
+                            <li>Discord server and community channels established</li>
+                            <li>Basic server rules and moderation system implemented</li>
+                            <li>Whitelist application process created</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Unity SMP. All rights reserved.</p>
+        <p>Not affiliated with Mojang or Microsoft.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
