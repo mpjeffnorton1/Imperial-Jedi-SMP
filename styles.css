@@ -404,6 +404,12 @@ footer {
     letter-spacing: 1px;
 }
 
+.streamer-platform a {
+    color: #a78bfa;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
 .streamer-card p {
     color: #ddd6fe;
     line-height: 1.6;
