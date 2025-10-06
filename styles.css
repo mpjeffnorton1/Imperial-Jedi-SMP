@@ -97,7 +97,8 @@ body {
     color: #ddd6fe;
 }
 
-.section p, .section li {
+.section p,
+.section li {
     line-height: 1.8;
     font-size: 1.1rem;
     margin-bottom: 1rem;
@@ -389,6 +390,14 @@ footer {
     margin-bottom: 1rem;
 }
 
+.streamer-avatar img.streamer-logo {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    border-radius: 12px;
+    display: inline-block;
+}
+
 .streamer-card h3 {
     color: #e9d5ff;
     font-size: 1.5rem;
@@ -522,4 +531,175 @@ footer {
     color: #ddd6fe;
     line-height: 1.7;
     margin-bottom: 0.5rem;
+}
+
+/* Hero overlay + layout (appended) */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    /* remove padding so the absolutely-positioned image can reach container edges */
+}
+
+/* Header image fills the hero container */
+.hero-header-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    /* span the hero's width (which is bounded by the .container) */
+    height: 320px;
+    object-fit: cover;
+    border-radius: 0;
+    /* match container edges */
+    margin: 0;
+}
+
+.hero-content {
+    position: relative;
+    /* sits above the absolutely positioned image */
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 320px;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem;
+    /* keep content padding inside the hero */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    text-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    max-width: 900px;
+    opacity: 0.95;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.45);
+}
+
+/* subtle overlay for readability */
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.4));
+    z-index: 1;
+}
+
+@media (max-width: 900px) {
+    .hero-header-image {
+        height: 260px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-header-image {
+        height: 180px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Carousel styles */
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0.02));
+    border-radius: 8px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 400ms ease-in-out;
+    will-change: transform;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.carousel-btn:focus {
+    outline: 2px solid #ffd;
+}
+
+.carousel-btn.prev {
+    left: 12px;
+}
+
+.carousel-btn.next {
+    right: 12px;
+}
+
+.carousel-dots {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding: 0.75rem 0;
+}
+
+.carousel-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.carousel-dots button[aria-selected="true"] {
+    background: #6c5ce7;
+}
+
+@media (min-width: 700px) {
+    .carousel-slide {
+        padding: 1rem;
+    }
 }

@@ -29,8 +29,11 @@
         <!-- Home Page -->
         <div id="home" class="page">
             <div class="hero">
-                <h1>Welcome to Unity SMP</h1>
-                <p>A thriving Minecraft community where creativity meets collaboration</p>
+                <img src="/Images/header.png" alt="Unity SMP Header" class="hero-header-image">
+                <div class="hero-content">
+                    <h1>Welcome to Unity SMP</h1>
+                    <p>A thriving Minecraft community where creativity meets collaboration</p>
+                </div>
             </div>
 
             <div class="section">
@@ -70,6 +73,11 @@
                         <h3>🕒 24/7 Operations</h3>
                         <p>Our server operates on a 24/7 basis, ensuring that you can always connect and play whenever
                             you want.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🔒 Latest Security Features</h3>
+                        <p>Our server is equipped with the latest security measures to protect your data and ensure a
+                            safe gaming experience. </p>
                     </div>
                 </div>
             </div>
@@ -196,6 +204,33 @@
                 <p>Become part of our growing community and start your adventure today!</p>
                 <a href="https://discord.gg/2RhhczWp" onclick="showPage('join')" class="btn">Join Unity SMP</a>
             </div>
+
+            <!-- Image Carousel -->
+            <div class="section">
+                <h2>Explore Builds & Landmarks</h2>
+                <div class="carousel" aria-label="Community images carousel">
+                    <button class="carousel-btn prev" aria-label="Previous slide">❮</button>
+                    <div class="carousel-track">
+                        <!-- Slides: images from /Images (header.png excluded) -->
+                        <div class="carousel-slide"><img src="/Images/aqua.png" alt="aqua"></div>
+                        <div class="carousel-slide"><img src="/Images/Blimp.png" alt="Blimp"></div>
+                        <div class="carousel-slide"><img src="/Images/Colossium.png" alt="Colossium"></div>
+                        <div class="carousel-slide"><img src="/Images/enchantingtower.png" alt="Enchanting Tower"></div>
+                        <div class="carousel-slide"><img src="/Images/green.png" alt="green"></div>
+                        <div class="carousel-slide"><img src="/Images/greentwo.png" alt="greentwo"></div>
+                        <div class="carousel-slide"><img src="/Images/May.png" alt="May"></div>
+                        <div class="carousel-slide"><img src="/Images/MSG Castle.png" alt="MSG Castle"></div>
+                        <div class="carousel-slide"><img src="/Images/nome.png" alt="nome"></div>
+                        <div class="carousel-slide"><img src="/Images/panda.png" alt="panda"></div>
+                        <div class="carousel-slide"><img src="/Images/Prendium.png" alt="Prendium"></div>
+                        <div class="carousel-slide"><img src="/Images/sheep.png" alt="sheep"></div>
+                        <div class="carousel-slide"><img src="/Images/shoppingdistrict.png" alt="shopping district">
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" aria-label="Next slide">❯</button>
+                    <div class="carousel-dots" role="tablist" aria-label="Carousel Navigation"></div>
+                </div>
+            </div>
         </div>
 
         <!-- Streamers Page -->
@@ -212,7 +247,8 @@
 
                 <div class="streamers-grid">
                     <div class="streamer-card">
-                        <div class="streamer-avatar">🎮</div>
+                        <div class="streamer-avatar"><img src="/Streamer%20Logos/IJLogo.png" alt="Imperial Jedi Logo"
+                                class="streamer-logo"></div>
                         <h3>Imperial Jedi</h3>
                         <div class="streamer-platform">Twitch</div>
                         <p>Imperial Jedi (Will) is a Canadian Twitch partner and content creator who has been streaming
@@ -234,9 +270,10 @@
                     </div>
 
                     <div class="streamer-card">
-                        <div class="streamer-avatar">🎬</div>
+                        <div class="streamer-avatar"><img src="/Streamer%20Logos/weyacht.PNG" alt="Weyacht Logo"
+                                class="streamer-logo"></div>
                         <h3>Weyacht</h3>
-                        <div class="streamer-platform">YouTube</div>
+                        <div class="streamer-platform">Twitch</div>
                         <p>Weyacht is a variety Twitch streamer who has been consistently streaming since December 2024,
                             bringing fresh energy and passion to the gaming community. With a genuine love for video
                             games and an even greater enthusiasm for meeting new people, Weyacht creates an engaging and
@@ -278,7 +315,8 @@
                     </div>
 
                     <div class="streamer-card">
-                        <div class="streamer-avatar">🎪</div>
+                        <div class="streamer-avatar"><img src="/Streamer%20Logos/SGlogo4.png" alt="Super G0D Logo"
+                                class="streamer-logo"></div>
                         <h3>Super G0D</h3>
                         <div class="streamer-platform">Twitch</div>
                         <p>SuperG0D is a Twitch streamer with a refreshingly humble mission: to bring a little joy to
@@ -300,7 +338,7 @@
                     </div>
 
                     <div class="streamer-card">
-                        <div class="streamer-avatar">🎨</div>
+                        <div class="streamer-avatar">⚡</div>
                         <h3>Vince Ohio</h3>
                         <div class="streamer-platform">Twitch</div>
                         <p>VinceOhio is a new variety Twitch streamer and gamer from Ohio dedicated to building a
@@ -322,7 +360,8 @@
                     </div>
 
                     <div class="streamer-card">
-                        <div class="streamer-avatar">🌟</div>
+                        <div class="streamer-avatar"><img src="/Streamer%20Logos/NerdDroid1Logo.png"
+                                alt="Nerd Droid Logo" class="streamer-logo"></div>
                         <h3>Nerd Droid</h3>
                         <div class="streamer-platform">Twitch</div>
                         <p>Nerd_Droid1 is a dad gamer who brings his passion for adventure to Twitch, navigating the
@@ -414,9 +453,10 @@
 
                     <div class="faq-item">
                         <h4>What are the age requirements?</h4>
-                        <p>We welcome players of all ages, but we recommend players be at least 13 years old to fully
-                            enjoy the community experience and follow our guidelines. Players under 13 should have
-                            parental permission.</p>
+                        <p>We welcome players of all ages, but we recommend players be at least 18 years old to fully
+                            enjoy the community experience and follow our guidelines. No players under 18 will be
+                            accepted at this time. If you're found to be under 18 you will be removed from the server
+                            immediately.</p>
                     </div>
                 </div>
 
@@ -456,7 +496,7 @@
                     <div class="faq-item">
                         <h4>Are there any custom features or plugins?</h4>
                         <p>Yes! We have several quality-of-life plugins and custom features to enhance your gameplay
-                            experience. These include player shops, land claiming, and community events. Join the server
+                            experience. These include player shops and community events. Join the server
                             to discover them all!</p>
                     </div>
 
@@ -468,8 +508,8 @@
 
                     <div class="faq-item">
                         <h4>How do I protect my builds?</h4>
-                        <p>We have land claiming features available to protect your builds from griefing. Instructions
-                            on how to claim land are available in-game and on our Discord.</p>
+                        <p>We run our server entirely on the honor system. Currently, we've had no issues with greifing
+                            and have no plans to implement griefing protection at this time.</p>
                     </div>
 
                     <div class="faq-item">
@@ -506,7 +546,7 @@
                 <div class="section" style="margin-top: 2rem; text-align: center;">
                     <h3>Still Need Help?</h3>
                     <p>Can't find the answer you're looking for? We're here to help!</p>
-                    <a href="#" class="btn">Join Our Discord</a>
+                    <a href="https://discord.gg/2RhhczWp" class="btn">Join Our Discord</a>
                     <p style="margin-top: 1rem; opacity: 0.9;">Our community team and moderators are always ready to
                         assist you with any questions or concerns.</p>
                 </div>
@@ -580,98 +620,63 @@
                 <div class="changelog-entry">
                     <div class="changelog-header">
                         <h3>Version 1.3.0</h3>
-                        <span class="changelog-date">October 5, 2024</span>
+                        <span class="changelog-date">September 29, 2025</span>
                         <span class="changelog-badge new">Latest</span>
                     </div>
                     <div class="changelog-content">
                         <h4>✨ New Features</h4>
                         <ul>
-                            <li>Added new shopping district at spawn with designated plots</li>
-                            <li>Implemented player warps system - create custom teleport points</li>
-                            <li>Introduced weekly community challenges with rewards</li>
-                        </ul>
-                        <h4>🔧 Improvements</h4>
-                        <ul>
-                            <li>Optimized server performance for smoother gameplay</li>
-                            <li>Enhanced land claiming system with better visualization</li>
-                            <li>Updated spawn area with improved navigation signs</li>
-                        </ul>
-                        <h4>🐛 Bug Fixes</h4>
-                        <ul>
-                            <li>Fixed issue with chest shops not working properly</li>
-                            <li>Resolved teleportation lag in certain areas</li>
-                            <li>Corrected permission issues with community farms</li>
+                            <li>Server updated to the latest version of 1.21.9</li>
+
                         </ul>
                     </div>
                 </div>
 
                 <div class="changelog-entry">
                     <div class="changelog-header">
-                        <h3>Version 1.2.5</h3>
-                        <span class="changelog-date">September 20, 2024</span>
+                        <h3>Version 1.2.8</h3>
+                        <span class="changelog-date">September 13, 2025</span>
                     </div>
                     <div class="changelog-content">
-                        <h4>✨ New Features</h4>
+                        <h4>✨ Build Move</h4>
                         <ul>
-                            <li>Added custom achievements system with unique rewards</li>
-                            <li>Introduced player-run events calendar on Discord</li>
+                            Here is a full list of the notes of the build move:
+
+                            <li>Create back up of world 2025-09-13_04-59-14</li>
+                            <li>Reset chunks with creative build on them + some surrounding chunks to enable
+                                natural terrain generation – coordinates are linked above</li>
+                            <li>Added extra torches/lanterns below pasted build to manage mob spawning and
+                                removed some trees</li>
                         </ul>
-                        <h4>🔧 Improvements</h4>
-                        <ul>
-                            <li>Improved anti-grief protection in community areas</li>
-                            <li>Enhanced Discord integration with in-game chat</li>
-                            <li>Updated resource pack with new textures</li>
-                        </ul>
-                        <h4>🐛 Bug Fixes</h4>
-                        <ul>
-                            <li>Fixed duplication glitch with certain items</li>
-                            <li>Resolved crash issues during large events</li>
-                        </ul>
+                        <h4>🔧 General Notes</h4>
+                        <p>There is no link change for Tailscale and everything is running as normal. Also, some
+                            server-side performance patches were added courtesy of May to reduce RAM and CPU
+                            usage so you should notice minimal lag within the server at all times. The server will still
+                            reset twice a day as scheduled, again to help with performance and to keep lag to a
+                            minimum. The backup schedule also has not changed and will still be backed up every two
+                            days. As far as data loss is concerned during the moving and rechunking process, excellent
+                            news!! There was no data loss!! Everything should be the same as you left your items
+                            when the server was shut down.</p>
+
                     </div>
                 </div>
 
                 <div class="changelog-entry">
                     <div class="changelog-header">
                         <h3>Version 1.2.0</h3>
-                        <span class="changelog-date">September 1, 2024</span>
+                        <span class="changelog-date">August 10, 2025</span>
                     </div>
                     <div class="changelog-content">
                         <h4>✨ New Features</h4>
-                        <ul>
-                            <li>Launched community build competition system</li>
-                            <li>Added player statistics tracking and leaderboards</li>
-                            <li>Introduced custom mob drops for enhanced gameplay</li>
-                        </ul>
+                        <p>No roll back or anything of that nature was needed. The VM simply needed to be refreshed
+                            which happens from time to time. This lowers RAM usage and over is good for the health of
+                            the VM and the server. You should not much less lag and much less stuttering. Since, the VM
+                            needed to be restarted, I did have to rotate the key as is standard procedure for security
+                            of the VM and all of you. I also made sure I made the key reusable for everyone and not a
+                            one time link (That was 100% my bad last time).</p>
                         <h4>🔧 Improvements</h4>
                         <ul>
-                            <li>Upgraded server hardware for better performance</li>
-                            <li>Improved spawn protection mechanics</li>
-                            <li>Enhanced economy balance with adjusted shop prices</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="changelog-entry">
-                    <div class="changelog-header">
-                        <h3>Version 1.1.0</h3>
-                        <span class="changelog-date">August 15, 2024</span>
-                    </div>
-                    <div class="changelog-content">
-                        <h4>✨ New Features</h4>
-                        <ul>
-                            <li>Added player shops plugin for economy system</li>
-                            <li>Introduced land claiming to protect builds</li>
-                            <li>Created community resource farm at spawn</li>
-                        </ul>
-                        <h4>🔧 Improvements</h4>
-                        <ul>
-                            <li>Optimized world generation for better biome distribution</li>
-                            <li>Updated server rules and guidelines</li>
-                        </ul>
-                        <h4>🐛 Bug Fixes</h4>
-                        <ul>
-                            <li>Fixed login issues for some players</li>
-                            <li>Resolved inventory sync problems</li>
+                            <li>Mod added - No Enderman Griefing</li>
                         </ul>
                     </div>
                 </div>
@@ -679,7 +684,7 @@
                 <div class="changelog-entry">
                     <div class="changelog-header">
                         <h3>Version 1.0.0</h3>
-                        <span class="changelog-date">August 1, 2024</span>
+                        <span class="changelog-date">June 1, 2025</span>
                         <span class="changelog-badge launch">Launch</span>
                     </div>
                     <div class="changelog-content">
