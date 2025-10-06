@@ -2,10 +2,16 @@
 # Replace the placeholders below with your Cloudflare account values.
 
 name = "unity-smp-site"
-type = "webpack"
+compatibility_date = "2025-10-05"
 
-# Optional: your cloudflare account id (not required for Pages via dashboard, but used by wrangler)
+# If you use wrangler CLI to publish Pages, add your account_id here or run
+# `wrangler pages project init --name unity-smp-site` which will populate
+# a fully configured toml for your account.
 # account_id = "YOUR_ACCOUNT_ID_HERE"
+
+# Cloudflare Pages settings
+project_name = "unity-smp-site"
+pages_build_output_dir = "dist"
 
 [site]
 bucket = "./dist"
@@ -14,6 +20,7 @@ entry-point = "./"
 # Include common static asset types. Adjust if you add other types.
 include = ["**/*"]
 
-# If you plan to use Wrangler CLI to preview or publish, set account_id above or run:
-#   wrangler pages project init --name unity-smp-site
-# which will generate a wrangler.toml tailored to your account.
+# Notes:
+# - The key `pages_build_output_dir` is used by newer Wrangler/Pages flows to locate
+#   the output directory for Pages deployments. Keep it set to the same directory
+#   you use as the publish directory in the Pages UI (here: dist).
