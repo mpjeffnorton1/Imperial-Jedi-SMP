@@ -1522,3 +1522,42 @@ footer {
         max-height: 120px;
     }
 }
+
+/* Mobile nav stacking fixes (ensure hamburger, panel and backdrop layer correctly) */
+/* This block enforces that the toggle is visible and the slide-out nav sits above the backdrop */
+.nav-toggle {
+    z-index: 1101;
+    /* above nav-container when closed */
+}
+
+.nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1099;
+    /* below toggle and nav-container */
+    display: none;
+    /* shown via .show */
+}
+
+.nav-backdrop.show {
+    display: block;
+}
+
+.nav-container {
+    z-index: 1100;
+    /* sits above backdrop but below the toggle so toggle remains clickable */
+}
+
+/* Ensure the toggle button is visible on high-contrast or image-heavy hero sections */
+.navbar .nav-toggle {
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 6px;
+}
+
+/* If the nav toggle seems off-screen on some devices, ensure it stays in the navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+}
