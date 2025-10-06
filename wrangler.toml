@@ -8,7 +8,7 @@ compatibility_date = "2025-10-05"
 # here or run `wrangler pages project init --name unity-smp-site` which will
 # generate a Pages-tailored configuration for your account.
 # account_id can be your Cloudflare account ID. The value below was provided by you.
-account_id = "90f6cd12811c6b7a86c91424ff618a71"
+account_id = 
 
 # Cloudflare Pages output directory (used by Wrangler and Pages deployments)
 pages_build_output_dir = "dist"
