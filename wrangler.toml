@@ -1,0 +1,19 @@
+# Wrangler configuration for Cloudflare Pages
+# Replace the placeholders below with your Cloudflare account values.
+
+name = "unity-smp-site"
+type = "webpack"
+
+# Optional: your cloudflare account id (not required for Pages via dashboard, but used by wrangler)
+# account_id = "YOUR_ACCOUNT_ID_HERE"
+
+[site]
+bucket = "./dist"
+entry-point = "./"
+
+# Include common static asset types. Adjust if you add other types.
+include = ["**/*"]
+
+# If you plan to use Wrangler CLI to preview or publish, set account_id above or run:
+#   wrangler pages project init --name unity-smp-site
+# which will generate a wrangler.toml tailored to your account.
