@@ -4,23 +4,18 @@
 name = "unity-smp-site"
 compatibility_date = "2025-10-05"
 
-# If you use wrangler CLI to publish Pages, add your account_id here or run
-# `wrangler pages project init --name unity-smp-site` which will populate
-# a fully configured toml for your account.
-# account_id = "YOUR_ACCOUNT_ID_HERE"
+# If you use the Wrangler CLI to publish Pages, either populate your account_id
+# here or run `wrangler pages project init --name unity-smp-site` which will
+# generate a Pages-tailored configuration for your account.
+# account_id can be your Cloudflare account ID. The value below was provided by you.
+account_id = "90f6cd12811c6b7a86c91424ff618a71"
 
-# Cloudflare Pages settings
-project_name = "unity-smp-site"
+# Cloudflare Pages output directory (used by Wrangler and Pages deployments)
 pages_build_output_dir = "dist"
 
-[site]
-bucket = "./dist"
-entry-point = "./"
-
-# Include common static asset types. Adjust if you add other types.
-include = ["**/*"]
-
-# Notes:
-# - The key `pages_build_output_dir` is used by newer Wrangler/Pages flows to locate
-#   the output directory for Pages deployments. Keep it set to the same directory
-#   you use as the publish directory in the Pages UI (here: dist).
+# NOTE:
+# - Do NOT include a `[site]` table for Pages projects; it is not supported by
+#   the Pages configuration validator. The `pages_build_output_dir` top-level
+#   key is the Pages-compatible way to point Wrangler/Pages at your static output.
+# - If you later add Cloudflare Functions or a Worker entry, you may need to add
+#   a top-level `main = "index.js"` (or similar) instead of `site.entry-point`.
