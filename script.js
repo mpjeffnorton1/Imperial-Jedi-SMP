@@ -124,10 +124,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         backdrop.addEventListener('click', closeNav);
 
-        // Close nav when a link inside nav is clicked
-        navContainer.addEventListener('click', (e) => {
-            const target = e.target;
-            if (target && target.tagName === 'A') closeNav();
+        // Attach explicit click handlers to anchor links inside the nav to ensure
+        // our navigation logic runs reliably on mobile (avoid race conditions).
+        const navAnchors = Array.from(navContainer.querySelectorAll('a'));
+        navAnchors.forEach((a) => {
+            a.addEventListener('click', (e) => {
+                const href = a.getAttribute('href') || '';
+                // If it's an internal hash link, handle it with showPage
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const pageName = href.slice(1);
+                    // call showPage directly, then close the nav shortly after
+                    if (typeof showPage === 'function') showPage(pageName);
+                    setTimeout(() => closeNav(), 80);
+                } else {
+                    // external links: allow default behavior but close nav after a moment
+                    setTimeout(() => closeNav(), 80);
+                }
+            });
         });
 
         // Close on Escape key

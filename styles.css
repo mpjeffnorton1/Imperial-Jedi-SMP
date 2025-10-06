@@ -863,6 +863,8 @@ footer {
     .nav-toggle {
         display: inline-block;
         margin-left: auto;
+        z-index: 1101;
+        /* ensure toggle is above the slide-out panel */
     }
 
     .nav-container {
@@ -876,18 +878,34 @@ footer {
         box-shadow: -6px 0 30px rgba(0, 0, 0, 0.6);
         transform: translateX(100%);
         transition: transform 300ms ease;
-        z-index: 1000;
+        z-index: 1100;
+        /* above backdrop */
         display: flex;
         flex-direction: column;
         padding: 1rem;
+        pointer-events: none;
+        /* ignore touches until opened */
     }
 
     .nav-container.open {
         transform: translateX(0);
+        pointer-events: auto;
+        /* allow interactions when open */
+    }
+
+    .nav-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 1099;
+        /* below nav-container */
+        display: none;
+        pointer-events: none;
     }
 
     .nav-backdrop.show {
         display: block;
+        pointer-events: auto;
     }
 }
 
@@ -1525,30 +1543,6 @@ footer {
 
 /* Mobile nav stacking fixes (ensure hamburger, panel and backdrop layer correctly) */
 /* This block enforces that the toggle is visible and the slide-out nav sits above the backdrop */
-.nav-toggle {
-    z-index: 1101;
-    /* above nav-container when closed */
-}
-
-.nav-backdrop {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-    z-index: 1099;
-    /* below toggle and nav-container */
-    display: none;
-    /* shown via .show */
-}
-
-.nav-backdrop.show {
-    display: block;
-}
-
-.nav-container {
-    z-index: 1100;
-    /* sits above backdrop but below the toggle so toggle remains clickable */
-}
-
 /* Ensure the toggle button is visible on high-contrast or image-heavy hero sections */
 .navbar .nav-toggle {
     color: #ffffff;
