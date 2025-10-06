@@ -72,3 +72,60 @@ document.addEventListener('DOMContentLoaded', () => {
     update();
     startAutoplay();
 });
+
+// Mobile nav toggle behavior
+document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.nav-toggle');
+    const navContainer = document.querySelector('.nav-container');
+    if (!toggle || !navContainer) return;
+
+    // create backdrop
+    const backdrop = document.createElement('div');
+    backdrop.className = 'nav-backdrop';
+    document.body.appendChild(backdrop);
+
+    function openNav() {
+        navContainer.classList.add('open');
+        backdrop.classList.add('show');
+        toggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeNav() {
+        navContainer.classList.remove('open');
+        backdrop.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+
+    toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        if (expanded) closeNav(); else openNav();
+    });
+
+    backdrop.addEventListener('click', closeNav);
+
+    // Close nav when a link is clicked
+    navContainer.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') closeNav();
+    });
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            const expanded = toggle.getAttribute('aria-expanded') === 'true';
+            if (expanded) closeNav();
+        }
+    });
+
+    // Swap toggle icon when opening/closing
+    const originalIcon = toggle.innerHTML;
+    function updateToggleIcon(open) {
+        toggle.innerHTML = open ? '✕' : originalIcon;
+    }
+    const origOpen = toggle.getAttribute('aria-expanded') === 'true';
+    updateToggleIcon(origOpen);
+    const origOpenObserver = new MutationObserver(() => {
+        updateToggleIcon(toggle.getAttribute('aria-expanded') === 'true');
+    });
+    origOpenObserver.observe(toggle, { attributes: true, attributeFilter: ['aria-expanded'] });
+});
