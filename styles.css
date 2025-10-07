@@ -80,7 +80,7 @@ body {
 .nav-backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.12);
     z-index: 900;
 }
 
@@ -93,7 +93,8 @@ body {
 .hero {
     text-align: center;
     padding: 4rem 2rem;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.28);
+    /* keep hero darker for readability */
     border-radius: 20px;
     margin-bottom: 3rem;
 }
@@ -110,8 +111,9 @@ body {
 }
 
 .section {
-    background: rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.06);
+    /* lighten sections */
+    backdrop-filter: blur(6px);
     border-radius: 15px;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -150,7 +152,8 @@ body {
 }
 
 .announcement {
-    background: rgba(139, 92, 246, 0.3);
+    background: rgba(139, 92, 246, 0.08);
+    /* more airy announcement */
     border-left: 4px solid #8b5cf6;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
@@ -186,11 +189,12 @@ body {
 }
 
 .card {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.32);
+    /* keep cards darker for readability */
     padding: 1.5rem;
     border-radius: 10px;
     transition: transform 0.3s;
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    border: 1px solid rgba(139, 92, 246, 0.28);
 }
 
 .card:hover {
@@ -254,7 +258,8 @@ footer {
 }
 
 .faq-item {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.06);
+    /* lighten FAQ items */
     padding: 1.5rem;
     margin-bottom: 1rem;
     border-radius: 10px;
@@ -299,11 +304,11 @@ footer {
 }
 
 .team-member {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.06);
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
-    border: 2px solid rgba(139, 92, 246, 0.3);
+    border: 2px solid rgba(139, 92, 246, 0.08);
     transition: all 0.3s;
 }
 
@@ -362,11 +367,11 @@ footer {
 }
 
 .thanks-member {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.06);
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    border: 1px solid rgba(139, 92, 246, 0.08);
     transition: all 0.3s;
 }
 
@@ -402,11 +407,11 @@ footer {
 }
 
 .streamer-card {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.06);
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
-    border: 2px solid rgba(139, 92, 246, 0.3);
+    border: 2px solid rgba(139, 92, 246, 0.08);
     transition: all 0.3s;
     display: flex;
     flex-direction: column;
@@ -493,15 +498,15 @@ footer {
 
 /* Change Log Page */
 .changelog-entry {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.06);
     border-radius: 12px;
     margin-bottom: 2rem;
     overflow: hidden;
-    border: 1px solid rgba(139, 92, 246, 0.3);
+    border: 1px solid rgba(139, 92, 246, 0.08);
 }
 
 .changelog-header {
-    background: rgba(139, 92, 246, 0.3);
+    background: rgba(139, 92, 246, 0.08);
     padding: 1.5rem;
     display: flex;
     align-items: center;
