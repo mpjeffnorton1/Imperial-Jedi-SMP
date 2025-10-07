@@ -176,21 +176,24 @@
 
 <body>
     <nav class="navbar">
-        <div class="logo-container">
-            <img src="/UnitySMPLogo.png" alt="Unity SMP Logo" class="logo">
-            <span style="font-size: 1.5rem; font-weight: bold;">Unity SMP</span>
-        </div>
-        <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Menu">☰</button>
-        <div class="nav-container" id="primary-navigation">
-            <ul class="nav-links">
-                <li><a href="#home" onclick="showPage('home')">Home</a></li>
-                <li><a href="#about" onclick="showPage('about')">About</a></li>
-                <li><a href="#streamers" onclick="showPage('streamers')">Streamers</a></li>
-                <li><a href="#join" onclick="showPage('join')">Join</a></li>
-                <li><a href="#faq" onclick="showPage('faq')">FAQ</a></li>
-                <li><a href="#rules" onclick="showPage('rules')">Rules</a></li>
-                <li><a href="#changelog" onclick="showPage('changelog')">Change Log</a></li>
-            </ul>
+        <div class="navbar-inner">
+            <div class="logo-container">
+                <img src="/UnitySMPLogo.png" alt="Unity SMP Logo" class="logo">
+                <span style="font-size: 1.5rem; font-weight: bold;">Unity SMP</span>
+            </div>
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false"
+                aria-label="Menu">☰</button>
+            <div class="nav-container" id="primary-navigation">
+                <ul class="nav-links">
+                    <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                    <li><a href="#about" onclick="showPage('about')">About</a></li>
+                    <li><a href="#streamers" onclick="showPage('streamers')">Streamers</a></li>
+                    <li><a href="#join" onclick="showPage('join')">Join</a></li>
+                    <li><a href="#faq" onclick="showPage('faq')">FAQ</a></li>
+                    <li><a href="#rules" onclick="showPage('rules')">Rules</a></li>
+                    <li><a href="#changelog" onclick="showPage('changelog')">Change Log</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -255,9 +258,12 @@
         <!-- About Page -->
         <div id="about" class="page hidden">
             <div class="hero">
-                <h1>About Unity SMP</h1>
-                <p>A creative sanctuary where builders, dreamers, and friends come together to craft extraordinary
-                    worlds</p>
+                <img src="/Images/header.png" alt="Unity SMP Header" class="hero-header-image">
+                <div class="hero-content">
+                    <h1>About Unity SMP</h1>
+                    <p>A creative sanctuary where builders, dreamers, and friends come together to craft extraordinary
+                        worlds</p>
+                </div>
             </div>
 
             <div class="section">
@@ -282,7 +288,7 @@
                         <h4>Server Founder</h4>
                         <div class="member-role">Community Leader & Visionary</div>
                         <div class="member-traits">
-                            <span class="trait">Server Developer & Web Designer</span>
+                            <span class="trait">Sever Developer & Web Developer</span>
                             <span class="trait">Community First</span>
                         </div>
                         <p>The heart and soul of Unity SMP, bringing the community together through dedication and
@@ -371,7 +377,7 @@
             <div class="section" style="text-align: center;">
                 <h2>Ready to Join Us?</h2>
                 <p>Become part of our growing community and start your adventure today!</p>
-                <a href="#join" onclick="showPage('join')" class="btn">Join Unity SMP</a>
+                <a href="https://discord.gg/2RhhczWp" onclick="showPage('join')" class="btn">Join Unity SMP</a>
             </div>
 
             <!-- Image Carousel -->
@@ -405,8 +411,11 @@
         <!-- Streamers Page -->
         <div id="streamers" class="page hidden">
             <div class="hero">
-                <h1>Unity SMP Streamers</h1>
-                <p>Watch our talented content creators bring Unity SMP to life</p>
+                <img src="/Images/header.png" alt="Unity SMP Header" class="hero-header-image">
+                <div class="hero-content">
+                    <h1>Unity SMP Streamers</h1>
+                    <p>Watch our talented content creators bring Unity SMP to life</p>
+                </div>
             </div>
 
             <div class="section">
@@ -604,7 +613,7 @@
                         <h4>How do I join Unity SMP?</h4>
                         <p>To join Unity SMP, you'll need to apply through our Discord server. Once your application is
                             reviewed and approved, you'll be whitelisted and can start playing. Check out our <a
-                                href="#join" onclick="showPage('join')" class="text-link">Join page</a> for detailed steps.
+                                href="#" onclick="showPage('join')" class="text-link">Join page</a> for detailed steps.
                         </p>
                     </div>
 
@@ -781,8 +790,11 @@
         <!-- Change Log Page -->
         <div id="changelog" class="page hidden">
             <div class="hero">
-                <h1>Change Log</h1>
-                <p>Track all updates, improvements, and changes to Unity SMP</p>
+                <img src="/Images/header.png" alt="Unity SMP Header" class="hero-header-image">
+                <div class="hero-content">
+                    <h1>Change Log</h1>
+                    <p>Track all updates, improvements, and changes to Unity SMP</p>
+                </div>
             </div>
 
             <div class="section">
