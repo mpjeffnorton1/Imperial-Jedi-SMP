@@ -178,10 +178,12 @@
     <nav class="navbar">
         <div class="navbar-inner">
             <div class="logo-container">
-                <img src="/UnitySMPLogo.png" alt="Unity SMP Logo" class="logo">
+                <a href="#home" onclick="showPage('home')"><img src="/UnitySMPLogo.png" alt="Unity SMP Logo"
+                        class="logo"></a>
                 <span style="font-size: 1.5rem; font-weight: bold;">Unity SMP</span>
             </div>
-            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Menu">☰</button>
+            <button class="nav-toggle" aria-controls="primary-navigation" aria-expanded="false"
+                aria-label="Menu">☰</button>
             <div class="nav-container" id="primary-navigation">
                 <ul class="nav-links">
                     <li><a href="#home" onclick="showPage('home')">Home</a></li>
@@ -467,7 +469,35 @@
                         -->
                         <a href="https://www.twitch.tv/weyacht" class="streamer-btn">Watch Stream</a>
                     </div>
-
+                    <div class="streamer-card">
+                        <div class="streamer-avatar"><img src="/Streamer%20Logos/DFLogo.png" alt="DasheryFails Logo"
+                                class="streamer-logo">
+                        </div>
+                        <h3>DasheryFails</h3>
+                        <div class="streamer-platform">Twitch</div>
+                        <p>DasheryFails is a variety Twitch streamer who has been entertaining audiences since January
+                            2023 with an eclectic mix of
+                            gaming content. With 606 followers and growing, this engaging creator streams multiple times
+                            a week, diving into
+                            simulators, action-packed adventures, and story-driven games that keep viewers coming back
+                            for more. DasheryFails brings
+                            an enthusiastic and welcoming energy to every stream, hoping to catch viewers in chat and
+                            become a valuable member of
+                            the ever-expanding community. Whether exploring new worlds, tackling challenging gameplay,
+                            or simply sharing laughs with
+                            the audience, DasheryFails creates an inclusive space where everyone can enjoy the journey
+                            together. With a subscriber
+                            goal of 70 and a commitment to consistent streaming, this is a channel on the rise, perfect
+                            for anyone looking to
+                            discover fresh content and be part of a friendly, growing community.</p>
+                        <!--
+                                                <div class="streamer-stats">
+                                                    <span class="stat">📹 Weekly Videos</span>
+                                                    <span class="stat">⭐ 10K+ Subscribers</span>
+                                                </div>
+                                                -->
+                        <a href="https://www.twitch.tv/dasheryfails" class="streamer-btn">Watch Stream</a>
+                    </div>
                     <div class="streamer-card">
                         <div class="streamer-avatar">⚡</div>
                         <h3>Snosquirrel</h3>
@@ -558,7 +588,35 @@
                         -->
                         <a href="https://www.twitch.tv/nerd_droid1" class="streamer-btn">Watch Stream</a>
                     </div>
+                    <div class="streamer-card">
+                        <div class="streamer-avatar">⚡</div>
+                        <h3>Bender689</h3>
+                        <div class="streamer-platform">Twitch</div>
+                        <p>Bender689 is a humble bending unit on Twitch, striving to survive and making friends while
+                            playing cool games along the
+                            way. With 68 followers and growing, this friendly streamer welcomes everyone with open
+                            arms—after all, everyone calls
+                            them Bender! As a gamer, chef, and most importantly a Girl Dad who loves all the arts,
+                            Bender689 brings a unique blend
+                            of creativity to the channel. From ceramics to videography, they navigate through stages of
+                            art and gaming, exploring
+                            cozy games and shooters with equal enthusiasm. With a passion for discovering hidden
+                            gems—those worst B movies you've
+                            probably never heard of and whatever games catch their eye—Bender689 creates an easygoing
+                            atmosphere where making new
+                            friends is the top priority. Currently working toward 10 subscribers and 1000 bits, this
+                            channel is all about good
+                            vibes, creative expression, and building a welcoming community one stream at a time.</p>
+                        <!--
+                                            <div class="streamer-stats">
+                                                <span class="stat">🔴 4x Weekly</span>
+                                                <span class="stat">⭐ 4K+ Followers</span>
+                                            </div>
+                                            -->
+                        <a href="https://www.twitch.tv/Bender689" class="streamer-btn">Watch Stream</a>
+                    </div>
                 </div>
+
 
                 <div style="text-align: center; margin-top: 3rem;">
                     <h3>Want to be featured?</h3>
@@ -778,6 +836,16 @@
                             <li>English is the primary language for server chat</li>
                         </ul>
                     </div>
+                    <div class="card">
+                        <h3>Streamer Rules</h3>
+                        <ul>
+                            <li>Keep Voice Chat Clean</li>
+                            <li>Keep Text Chat Clean</li>
+                            <li>Respect the streamer, don't go seek them out</li>
+                            <li>English is the primary language for server chat</li>
+                            <li>Report issues or concerns to moderators privately</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <h3>Consequences</h3>
@@ -795,13 +863,46 @@
                     <p>Track all updates, improvements, and changes to Unity SMP</p>
                 </div>
             </div>
-
             <div class="section">
                 <div class="changelog-entry">
                     <div class="changelog-header">
-                        <h3>Version 1.3.0</h3>
-                        <span class="changelog-date">September 29, 2025</span>
+                        <h3>Version 1.21.91</h3>
+                        <span class="changelog-date">October 7, 2025</span>
                         <span class="changelog-badge new">Latest</span>
+                    </div>
+                    <div class="changelog-content">
+                        <h4>✨ General Notes</h4>
+                        <p>We've added a few mods on the backend in order to enhance performance for all players. The
+                            current goal is quality of life improvements and server stability. To do this we're working
+                            on
+                            reducing overall RAM usage and CPU spikes when players enter the server. CPU spike will
+                            usually
+                            increase by 4 - 5% when a player enters the server. We'll be monitoring this closely to see
+                            if
+                            this reduces the spike. We've also added <a href="https://spark.lucko.me/docs">Spark</a> for
+                            performance monitoring. We'll be making adjustments based on the results of this monitoring.
+                            Expect the monitoring to last two to three weeks before any meaningful action is taken
+                            within
+                            the server. During this time you could see more lag spikes then normal as we've added a bit
+                            more
+                            mods than normal in order to attempt server performance and stabilize random lag spikes.
+                        </p>
+                        <h4>🔧 Improvements</h4>
+                        <ul>
+                            <li>Lithium Updated - 1.21.9</li>
+                            <li>Ferritcore Updated - 1.21.9</li>
+                            <li>Very Many Players Added - 1.21.9 - Server side performance mod, designed for network
+                                stablization.</li>
+                            <li>Clumps Added - 1.21.9 - this will group XP orbs into one large ball</li>
+                            <li>Spark 1.21.9 - Server Side Performance Monitoring Tool</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="changelog-entry">
+                    <div class="changelog-header">
+                        <h3>Version 1.21.9</h3>
+                        <span class="changelog-date">September 29, 2025</span>
                     </div>
                     <div class="changelog-content">
                         <h4>✨ New Features</h4>
