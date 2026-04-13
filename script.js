@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // === Routing Logic ===
     const pages = document.querySelectorAll('.page');
     const navContainer = document.querySelector('.nav-container');
-    const backdrop = document.querySelector('.nav-backdrop');
+    let backdrop = document.querySelector('.nav-backdrop');
     const toggle = document.querySelector('.nav-toggle');
 
     function showPage(pageName) {
@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             targetPage.classList.remove('hidden');
         }
     }
+    window.showPage = showPage;
 
     function closeNav() {
         if (navContainer && backdrop && toggle) {
@@ -54,11 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const newBackdrop = document.createElement('div');
             newBackdrop.className = 'nav-backdrop';
             document.body.appendChild(newBackdrop);
-
-            // Re-assign backdrop since it was just created
-            const createdBackdrop = document.querySelector('.nav-backdrop');
-
-            createdBackdrop.addEventListener('click', closeNav);
+            backdrop = newBackdrop;
+            backdrop.addEventListener('click', closeNav);
         } else {
             backdrop.addEventListener('click', closeNav);
         }
@@ -69,8 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             void navContainer.offsetWidth; // Force browser reflow to register the transition
             navContainer.classList.add('open');
 
-            const currentBackdrop = document.querySelector('.nav-backdrop');
-            if (currentBackdrop) currentBackdrop.classList.add('show');
+            if (backdrop) backdrop.classList.add('show');
             toggle.setAttribute('aria-expanded', 'true');
             document.body.style.overflow = 'hidden';
         }
@@ -96,16 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
             toggle.innerHTML = open ? '✕' : originalIcon;
         }
 
-        const origOpen = toggle.getAttribute('aria-expanded') === 'true';
-        updateToggleIcon(origOpen);
-
-        const origOpenObserver = new MutationObserver(() => {
-            updateToggleIcon(toggle.getAttribute('aria-expanded') === 'true');
-        });
-        origOpenObserver.observe(toggle, { attributes: true, attributeFilter: ['aria-expanded'] });
+        updateToggleIcon(toggle.getAttribute('aria-expanded') === 'true');
     }
 
     // === Carousel Logic ===
+    const carousel = document.querySelector('.carousel');
     const track = document.querySelector('.carousel-track');
     if (track) {
         const slides = Array.from(track.children);
@@ -146,7 +138,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('keydown', (e) => {
             // Only capture arrow keys if we are fairly sure the carousel is "active" or visible
             // This is optional but prevents accidental scrolling
-            const carousel = document.querySelector('.carousel');
             if (carousel && carousel.getBoundingClientRect().top < window.innerHeight && carousel.getBoundingClientRect().bottom > 0) {
                 if (e.key === 'ArrowRight') next();
                 if (e.key === 'ArrowLeft') prev();
@@ -169,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
             startAutoplay();
         }
 
-        const carousel = document.querySelector('.carousel');
         if (carousel) {
             carousel.addEventListener('mouseenter', stopAutoplay);
             carousel.addEventListener('mouseleave', startAutoplay);
