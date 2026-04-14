@@ -1,0 +1,14 @@
+{
+  "name": "unity-smp-site",
+  "version": "1.0.0",
+  "description": "Unity SMP Website",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "dev": "wrangler pages dev dist",
+    "deploy": "wrangler pages deploy dist"
+  },
+  "devDependencies": {
+    "wrangler": "^3.109.0"
+  }
+}
