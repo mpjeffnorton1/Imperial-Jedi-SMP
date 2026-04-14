@@ -93,8 +93,8 @@ body {
 .hero {
     text-align: center;
     padding: 6rem 3rem 8rem 3rem;
-    background: rgba(0, 0, 0, 0.28);
-    /* keep hero darker for readability */
+    background: rgba(0, 0, 0, 0.15);
+    /* lighter hero background */
     border-radius: 20px;
     margin-bottom: 3rem;
 }
@@ -114,8 +114,8 @@ body {
 }
 
 .section {
-    background: rgba(0, 0, 0, 0.06);
-    /* lighten sections */
+    background: rgba(255, 255, 255, 0.08);
+    /* lighter sections with white tint */
     backdrop-filter: blur(6px);
     border-radius: 15px;
     padding: 2rem;
@@ -125,14 +125,14 @@ body {
 .section h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #e9d5ff;
+    color: #ffffff;
 }
 
 .section h3 {
     font-size: 1.5rem;
     margin-top: 1.5rem;
     margin-bottom: 1rem;
-    color: #ddd6fe;
+    color: #ffffff;
 }
 
 .section p,
@@ -149,7 +149,7 @@ body {
 .subtitle {
     text-align: center;
     font-size: 1.2rem;
-    color: #c4b5fd;
+    color: #ffffff;
     margin-bottom: 2rem;
     font-style: italic;
 }
@@ -165,7 +165,7 @@ body {
 
 .announcement h3 {
     margin-top: 0;
-    color: #e9d5ff;
+    color: #ffffff;
 }
 
 .btn {
@@ -192,17 +192,17 @@ body {
 }
 
 .card {
-    background: rgba(0, 0, 0, 0.32);
-    /* keep cards darker for readability */
+    background: rgba(0, 0, 0, 0.5);
+    /* darker cards for better contrast */
     padding: 1.5rem;
     border-radius: 10px;
     transition: transform 0.3s;
-    border: 1px solid rgba(139, 92, 246, 0.28);
+    border: 1px solid rgba(139, 92, 246, 0.4);
 }
 
 .card:hover {
     transform: translateY(-5px);
-    border-color: rgba(139, 92, 246, 0.6);
+    border-color: rgba(139, 92, 246, 0.8);
 }
 
 .card h3 {
@@ -261,8 +261,8 @@ footer {
 }
 
 .faq-item {
-    background: rgba(0, 0, 0, 0.06);
-    /* lighten FAQ items */
+    background: rgba(255, 255, 255, 0.08);
+    /* lighter FAQ items */
     padding: 1.5rem;
     margin-bottom: 1rem;
     border-radius: 10px;
@@ -271,7 +271,7 @@ footer {
 }
 
 .faq-item:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     border-left-color: #a78bfa;
 }
 
@@ -307,17 +307,18 @@ footer {
 }
 
 .team-member {
-    background: rgba(0, 0, 0, 0.06);
+    background: rgba(0, 0, 0, 0.5);
+    /* darker team member cards */
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
-    border: 2px solid rgba(139, 92, 246, 0.08);
+    border: 2px solid rgba(139, 92, 246, 0.3);
     transition: all 0.3s;
 }
 
 .team-member:hover {
     transform: translateY(-8px);
-    border-color: rgba(139, 92, 246, 0.6);
+    border-color: rgba(139, 92, 246, 0.8);
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
 }
 
@@ -370,17 +371,18 @@ footer {
 }
 
 .thanks-member {
-    background: rgba(0, 0, 0, 0.06);
+    background: rgba(255, 255, 255, 0.08);
+    /* lighter thanks member cards */
     padding: 1.5rem;
     border-radius: 10px;
     text-align: center;
-    border: 1px solid rgba(139, 92, 246, 0.08);
+    border: 1px solid rgba(139, 92, 246, 0.2);
     transition: all 0.3s;
 }
 
 .thanks-member:hover {
-    background: rgba(0, 0, 0, 0.3);
-    border-color: rgba(139, 92, 246, 0.4);
+    background: rgba(0, 0, 0, 0.4);
+    border-color: rgba(139, 92, 246, 0.6);
 }
 
 .thanks-icon {
@@ -410,11 +412,12 @@ footer {
 }
 
 .streamer-card {
-    background: rgba(0, 0, 0, 0.06);
+    background: rgba(0, 0, 0, 0.5);
+    /* darker streamer cards */
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
-    border: 2px solid rgba(139, 92, 246, 0.08);
+    border: 2px solid rgba(139, 92, 246, 0.3);
     transition: all 0.3s;
     display: flex;
     flex-direction: column;
@@ -422,7 +425,7 @@ footer {
 
 .streamer-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(139, 92, 246, 0.6);
+    border-color: rgba(139, 92, 246, 0.8);
     box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
 }
 
@@ -501,15 +504,16 @@ footer {
 
 /* Change Log Page */
 .changelog-entry {
-    background: rgba(0, 0, 0, 0.06);
+    background: rgba(0, 0, 0, 0.5);
+    /* darker changelog entries */
     border-radius: 12px;
     margin-bottom: 2rem;
     overflow: hidden;
-    border: 1px solid rgba(139, 92, 246, 0.08);
+    border: 1px solid rgba(139, 92, 246, 0.3);
 }
 
 .changelog-header {
-    background: rgba(139, 92, 246, 0.08);
+    background: rgba(139, 92, 246, 0.15);
     padding: 1.5rem;
     display: flex;
     align-items: center;
@@ -731,7 +735,7 @@ footer {
     height: 10px;
     border-radius: 50%;
     border: none;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     cursor: pointer;
 }
 
