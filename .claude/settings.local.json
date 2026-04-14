@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -lh *.html *.css *.js *.png *.json *.toml *.md)",
+      "Bash(awk '{print $5 \"\\\\t\" $9}')"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+Contact: https://discord.gg/2RhhczWp
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://www.unitysmp.com/.well-known/security.txt
