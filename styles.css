@@ -102,8 +102,12 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-.nav-links a:focus {
-    outline: none;
+.nav-links a:visited {
+    background: transparent;
+}
+
+.nav-links a:focus-visible {
+    outline: 2px solid rgba(139, 92, 246, 0.8);
     background: rgba(255, 255, 255, 0.1);
 }
 
@@ -166,6 +170,22 @@ body {
     margin-bottom: 3rem;
     position: relative;
     overflow: hidden;
+}
+
+.hero-header-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
 }
 
 .hero h1 {
@@ -265,20 +285,6 @@ body {
     margin-top: 2rem;
 }
 
-.card {
-    background: rgba(0, 0, 0, 0.5);
-    /* darker cards for better contrast */
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: transform 0.3s;
-    border: 1px solid rgba(139, 92, 246, 0.4);
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(139, 92, 246, 0.8);
-}
-
 .streamer-btn {
     padding: 0.8rem 1.5rem;
 }
@@ -336,21 +342,6 @@ body {
 .card:hover {
     transform: translateY(-5px);
     border-color: var(--color-border-hover);
-}
-
-.faq-item {
-    background: rgba(255, 255, 255, 0.08);
-    /* lighter FAQ items */
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-    border-left: 3px solid #8b5cf6;
-    transition: all 0.3s;
-}
-
-.faq-item:hover {
-    background: rgba(0, 0, 0, 0.4);
-    border-left-color: #a78bfa;
 }
 
 .card li {
@@ -758,66 +749,6 @@ footer {
     }
 }
 
-/* Desktop navigation - ensure menu words are always visible */
-@media (min-width: 769px) {
-    .nav-toggle {
-        display: none !important;
-    }
-
-    .nav-container {
-        position: static !important;
-        transform: none !important;
-        background: none !important;
-        box-shadow: none !important;
-        width: auto !important;
-        height: auto !important;
-        padding: 0 !important;
-        display: flex !important;
-        flex-direction: row !important;
-        overflow-y: visible !important;
-    }
-
-    .nav-links {
-        display: flex !important;
-        flex-direction: row !important;
-        gap: 2rem !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        width: auto !important;
-        align-items: center !important;
-    }
-
-    .nav-links li {
-        width: auto !important;
-        margin: 0 !important;
-    }
-
-    .nav-links a {
-        display: inline-block !important;
-        padding: 0.5rem 1rem !important;
-        background: transparent !important;
-        width: auto !important;
-        border-radius: 6px !important;
-        margin-bottom: 0 !important;
-    }
-
-    .nav-links a:hover {
-        background: rgba(255, 255, 255, 0.1) !important;
-    }
-
-    .nav-links a:focus {
-        background: rgba(255, 255, 255, 0.1) !important;
-    }
-
-    .nav-links a:active {
-        background: rgba(255, 255, 255, 0.1) !important;
-    }
-
-    .nav-backdrop {
-        display: none !important;
-    }
-}
-
 @media (max-width: 768px) {
     .navbar-inner {
         padding: 0 1rem;
@@ -971,50 +902,17 @@ footer {
     }
 }
 
-    .logo-container {
-        order: 1;
-        margin-bottom: 0;
+@media (max-width: 400px) {
+    .hero-content {
+        min-height: 120px;
+        padding: 0.5rem 0.1rem;
     }
 
-    .nav-container {
-        position: fixed;
-        top: 70px;
-        right: 0;
-        width: 80%;
-        max-width: 320px;
-        height: calc(100vh - 70px);
-        background: rgba(12, 6, 23, 0.95);
-        backdrop-filter: blur(10px);
-        box-shadow: -6px 0 30px rgba(0, 0, 0, 0.6);
-        transform: translateX(100%);
-        transition: transform 300ms ease;
-        z-index: 1000;
-        display: flex;
-        flex-direction: column;
-        padding: 1rem;
-        overflow-y: auto;
+    .hero-content h1 {
+        font-size: 1.05rem;
     }
 
-    .nav-container.open {
-        transform: translateX(0);
-    }
-
-    /* Duplicate navigation styles removed to prevent dark spots on desktop.
-Mobile-specific navigation styles are defined inside the media queries below.
-*/
-
-    @media (max-width: 400px) {
-        .hero-content {
-            min-height: 120px;
-            padding: 0.5rem 0.1rem;
-        }
-
-        .hero-content h1 {
-            font-size: 1.05rem;
-        }
-
-        .carousel-slide img {
-            max-height: 120px;
-        }
+    .carousel-slide img {
+        max-height: 120px;
     }
 }
